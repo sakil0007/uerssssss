@@ -478,7 +478,7 @@ with bot:
                     )
                 except Exception as e:
                     LOGS.error(str(e))
-                    if BOTLOG:
+                    if BOTLOG_CHATID:
                         await event.client.send_message(
                             BOTLOG_CHATID,
                             f"**ERROR:** Saat menyimpan detail pesan di database\n`{str(e)}`",
@@ -529,7 +529,7 @@ with bot:
                             msg.id)
                     except Exception as e:
                         LOGS.error(str(e))
-                        if BOTLOG:
+                        if BOTLOG_CHATID:
                             await event.client.send_message(
                                 BOTLOG_CHATID,
                                 f"**ERROR:** Saat menyimpan detail pesan di database\n`{e}`",
